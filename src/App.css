@@ -1,0 +1,1604 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   BASIC PAGE
+========================================= */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f0df;
+  color: #202122;
+}
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.home-card {
+  width: 100%;
+  max-width: 850px;
+
+  background: #ffffff;
+  border: 1px solid #555555;
+  border-radius: 20px;
+
+  padding: 50px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 0 #292929;
+}
+
+/* The Wiki Game logo */
+
+.wiki-game-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 20px;
+}
+
+.wiki-game-logo img {
+  width: 190px;
+  height: auto;
+
+  display: block;
+}
+
+/* Home subtitle */
+
+.home-card h2 {
+  margin: 12px 0 0;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  color: #333333 !important;
+}
+
+/* Home description */
+
+.home-card > p {
+  max-width: 600px;
+
+  margin: 22px auto 35px;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #666666 !important;
+}
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 35px;
+}
+
+.info-cards div {
+  min-height: 145px;
+
+  padding: 20px 10px;
+
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.info-cards span {
+  display: block;
+
+  font-size: 28px;
+
+  margin-bottom: 8px;
+}
+
+.info-cards strong {
+  display: block;
+
+  font-size: 22px;
+
+  color: #202122 !important;
+}
+
+.info-cards small {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 16px;
+
+  color: #666666 !important;
+}
+
+/* =========================================
+   PARTICIPANT NAME
+========================================= */
+
+.home-card label {
+  display: block;
+
+  text-align: left;
+
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #202122 !important;
+}
+
+.home-card input {
+  width: 100%;
+  height: 62px;
+
+  padding: 0 18px;
+
+  border: 1px solid #999999;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #202122;
+
+  font-size: 17px;
+
+  outline: none;
+
+  margin-bottom: 14px;
+}
+
+.home-card input::placeholder {
+  color: #777777;
+}
+
+.home-card input:focus {
+  border-color: #596f8f;
+
+  box-shadow:
+    0 0 0 2px rgba(89, 111, 143, 0.15);
+}
+
+/* =========================================
+   JOIN BUTTON
+========================================= */
+
+.home-card button {
+  width: 100%;
+  height: 62px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #596f8f;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.home-card button:hover {
+  background: #465a76;
+}
+
+.home-card button:active {
+  transform: translateY(1px);
+}
+
+.joined-count {
+  margin-top: 20px;
+
+  font-size: 15px;
+
+  color: #666666 !important;
+}
+
+/* =========================================
+   GAME PAGE
+========================================= */
+
+.game-page {
+  min-height: 100vh;
+
+  background: #f1f0df;
+}
+
+/* =========================================
+   GAME HEADER
+========================================= */
+
+.game-header {
+  height: 75px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #cccccc;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px;
+}
+
+.header-logo img {
+  width: 135px;
+
+  height: auto;
+
+  display: block;
+}
+
+.player-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.player-info span {
+  color: #777777;
+}
+
+.player-info strong {
+  color: #202122;
+}
+
+/* =========================================
+   GAME CONTAINER
+========================================= */
+
+.game-container {
+  max-width: 1400px;
+
+  margin: 30px auto;
+
+  padding: 0 25px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(300px, 1fr);
+
+  gap: 25px;
+}
+
+/* =========================================
+   GAME / LEADERBOARD CARDS
+========================================= */
+
+.game-card,
+.leaderboard-card {
+  background: #ffffff;
+
+  border: 1px solid #555555;
+
+  border-radius: 16px;
+
+  box-shadow: 0 6px 0 #292929;
+}
+
+.game-card {
+  padding: 28px;
+}
+
+/* =========================================
+   GAME TOP
+========================================= */
+
+.game-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #dddddd;
+
+  padding-bottom: 20px;
+}
+
+.game-label {
+  font-size: 12px;
+
+  font-weight: bold;
+
+  color: #777777;
+
+  letter-spacing: 1px;
+}
+
+.game-top h1 {
+  margin: 6px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+
+  color: #202122 !important;
+}
+
+/* =========================================
+   TIMER
+========================================= */
+
+.timer {
+  min-width: 110px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 15px;
+
+  background: #f5f5f5;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 9px;
+}
+
+.timer span {
+  font-size: 20px;
+}
+
+.timer strong {
+  font-size: 22px;
+
+  color: #202122 !important;
+}
+
+.timer-danger {
+  border-color: #b32424;
+}
+
+.timer-danger strong {
+  color: #b32424 !important;
+}
+
+/* =========================================
+   START → TARGET ROUTE
+========================================= */
+
+.route-box {
+  margin: 25px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    60px
+    1fr;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.article {
+  padding: 18px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.article span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  color: #777777 !important;
+}
+
+.article strong {
+  color: #202122 !important;
+
+  font-size: 17px;
+}
+
+.start-article {
+  border-left: 5px solid #596f8f;
+}
+
+.target-article {
+  border-left: 5px solid #6d8b74;
+}
+
+.arrow {
+  text-align: center;
+
+  font-size: 28px;
+
+  color: #596f8f;
+}
+
+/* =========================================
+   CURRENT ARTICLE
+========================================= */
+
+.current-article-bar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  padding: 14px 16px;
+
+  background: #f5f5f5;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+}
+
+.current-article-bar span {
+  font-size: 11px;
+
+  font-weight: bold;
+
+  color: #777777 !important;
+
+  letter-spacing: 1px;
+}
+
+.current-article-bar strong {
+  color: #202122 !important;
+
+  font-size: 16px;
+}
+
+/* =========================================
+   WIKIPEDIA ARTICLE AREA
+========================================= */
+
+.wikipedia-area {
+  min-height: 500px;
+
+  max-height: 650px;
+
+  margin-top: 15px;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 10px;
+
+  display: block;
+}
+
+/* Main Wikipedia content */
+
+.wikipedia-content {
+  padding: 30px;
+
+  text-align: left;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  color: #202122 !important;
+
+  background: #ffffff;
+}
+
+/* IMPORTANT:
+   Force Wikipedia text to dark */
+
+.wikipedia-content,
+.wikipedia-content * {
+  color: #202122;
+}
+
+/* Paragraphs */
+
+.wikipedia-content p {
+  color: #202122 !important;
+
+  margin: 0.7em 0;
+}
+
+/* Headings */
+
+.wikipedia-content h1,
+.wikipedia-content h2,
+.wikipedia-content h3,
+.wikipedia-content h4,
+.wikipedia-content h5,
+.wikipedia-content h6 {
+  color: #202122 !important;
+
+  opacity: 1 !important;
+
+  font-weight: bold;
+}
+
+.wikipedia-content h1 {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  padding-bottom: 8px;
+}
+
+.wikipedia-content h2 {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  margin-top: 25px;
+
+  margin-bottom: 12px;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  padding-bottom: 5px;
+}
+
+.wikipedia-content h3 {
+  font-size: 20px;
+
+  margin-top: 20px;
+}
+
+.wikipedia-content h4 {
+  font-size: 17px;
+}
+
+/* Wikipedia links */
+
+.wikipedia-content a {
+  color: #0645ad !important;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.wikipedia-content a:hover {
+  color: #0b0080 !important;
+
+  text-decoration: underline;
+}
+
+/* Edit links */
+
+.wikipedia-content .mw-editsection {
+  margin-left: 8px;
+}
+
+.wikipedia-content .mw-editsection,
+.wikipedia-content .mw-editsection a {
+  color: #0645ad !important;
+
+  font-size: 13px;
+
+  font-weight: normal;
+}
+
+/* Images */
+
+.wikipedia-content img {
+  max-width: 100%;
+
+  height: auto;
+}
+
+/* Figures */
+
+.wikipedia-content figure {
+  max-width: 100%;
+
+  margin: 15px;
+}
+
+/* Lists */
+
+.wikipedia-content ul,
+.wikipedia-content ol {
+  padding-left: 30px;
+
+  color: #202122 !important;
+}
+
+.wikipedia-content li {
+  color: #202122 !important;
+}
+
+/* Tables */
+
+.wikipedia-content table {
+  max-width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 14px;
+
+  color: #202122 !important;
+}
+
+.wikipedia-content th,
+.wikipedia-content td {
+  border: 1px solid #a2a9b1;
+
+  padding: 6px;
+
+  color: #202122 !important;
+}
+
+.wikipedia-content th {
+  background: #eaecf0;
+
+  font-weight: bold;
+}
+
+/* Infobox */
+
+.wikipedia-content .infobox {
+  max-width: 320px;
+
+  margin: 0 0 15px 20px;
+
+  border: 1px solid #a2a9b1;
+
+  background: #f8f9fa;
+
+  font-size: 14px;
+}
+
+.wikipedia-content .infobox th {
+  background: #cee0f2;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.wiki-loading {
+  min-height: 450px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #666666;
+}
+
+.wiki-loading p {
+  color: #666666 !important;
+}
+
+.loading-spinner {
+  width: 40px;
+
+  height: 40px;
+
+  border: 4px solid #dddddd;
+
+  border-top-color: #596f8f;
+
+  border-radius: 50%;
+
+  animation: wiki-spin 0.8s linear infinite;
+}
+
+@keyframes wiki-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   GAME STATS
+========================================= */
+
+.game-stats {
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #dddddd;
+
+  display: grid;
+
+  grid-template-columns:
+    120px
+    130px
+    1fr;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.game-stats div {
+  padding: 10px;
+}
+
+.game-stats span {
+  display: block;
+
+  color: #777777 !important;
+
+  font-size: 13px;
+}
+
+.game-stats strong {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 21px;
+
+  color: #202122 !important;
+}
+
+.finish-button {
+  height: 48px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #596f8f;
+
+  color: #ffffff !important;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.finish-button:hover {
+  background: #465a76;
+}
+
+/* =========================================
+   LEADERBOARD
+========================================= */
+
+.leaderboard-card {
+  padding: 25px;
+
+  height: fit-content;
+}
+
+.leaderboard-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+.leaderboard-title > span {
+  font-size: 30px;
+}
+
+.leaderboard-title h2 {
+  margin: 0;
+
+  font-size: 19px;
+
+  color: #202122 !important;
+}
+
+.leaderboard-title p {
+  margin: 3px 0 0;
+
+  font-size: 12px;
+
+  color: #777777 !important;
+
+  letter-spacing: 1px;
+}
+
+/* Leaderboard tabs */
+
+.leaderboard-tabs {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  margin: 20px 0;
+}
+
+.leaderboard-tabs button {
+  padding: 11px;
+
+  border: 1px solid #cccccc;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  color: #666666 !important;
+}
+
+.leaderboard-tabs button:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.leaderboard-tabs button:last-child {
+  border-radius: 0 7px 7px 0;
+}
+
+.leaderboard-tabs .active-tab {
+  background: #596f8f;
+
+  color: #ffffff !important;
+
+  border-color: #596f8f;
+}
+
+/* Leaderboard rows */
+
+.leaderboard-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.leader-row {
+  display: grid;
+
+  grid-template-columns:
+    35px
+    1fr
+    auto;
+
+  align-items: center;
+
+  padding: 13px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+}
+
+.leader-row > span {
+  font-weight: bold;
+
+  color: #596f8f !important;
+}
+
+.leader-row strong {
+  color: #202122 !important;
+
+  font-size: 14px;
+}
+
+.leader-row small {
+  color: #777777 !important;
+}
+
+/* Your position */
+
+.your-position {
+  margin-top: 20px;
+
+  padding: 16px;
+
+  background: #f1f0df;
+
+  border-radius: 9px;
+
+  text-align: center;
+}
+
+.your-position span {
+  display: block;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  color: #777777 !important;
+
+  letter-spacing: 1px;
+}
+
+.your-position strong {
+  display: block;
+
+  margin: 5px 0;
+
+  font-size: 25px;
+
+  color: #202122 !important;
+}
+
+.your-position p {
+  margin: 0;
+
+  font-weight: bold;
+
+  color: #202122 !important;
+}
+
+/* =========================================
+   RESULT SCREEN
+========================================= */
+
+.result-box {
+  margin-top: 20px;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: #f1f0df;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 10px;
+}
+
+.result-box h2 {
+  margin-top: 0;
+
+  color: #202122 !important;
+}
+
+.result-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+.result-stats div {
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+}
+
+.result-stats span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #777777 !important;
+}
+
+.result-stats strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #202122 !important;
+}
+
+.back-home-button {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #596f8f;
+
+  color: #ffffff !important;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.back-home-button:hover {
+  background: #465a76;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .game-container {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-card {
+    order: 2;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .home {
+    padding: 15px;
+  }
+
+  .home-card {
+    padding: 35px 22px;
+
+    border-radius: 16px;
+  }
+
+  .wiki-game-logo img {
+    width: 160px;
+  }
+
+  .home-card h2 {
+    font-size: 19px;
+  }
+
+  .home-card > p {
+    font-size: 16px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .info-cards div {
+    min-height: 120px;
+  }
+
+  /* Game header */
+
+  .game-header {
+    padding: 0 15px;
+  }
+
+  .header-logo img {
+    width: 110px;
+  }
+
+  /* Game container */
+
+  .game-container {
+    margin: 15px auto;
+
+    padding: 0 12px;
+  }
+
+  .game-card {
+    padding: 18px;
+  }
+
+  /* Game top */
+
+  .game-top {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .game-top h1 {
+    font-size: 21px;
+  }
+
+  .timer {
+    min-width: 90px;
+  }
+
+  .timer strong {
+    font-size: 18px;
+  }
+
+  /* Route */
+
+  .route-box {
+    grid-template-columns: 1fr;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  /* Current article */
+
+  .current-article-bar {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+
+  /* Wikipedia */
+
+  .wikipedia-area {
+    min-height: 450px;
+
+    max-height: 600px;
+  }
+
+  .wikipedia-content {
+    padding: 18px;
+
+    font-size: 15px;
+  }
+
+  .wikipedia-content h1 {
+    font-size: 26px;
+  }
+
+  .wikipedia-content h2 {
+    font-size: 21px;
+  }
+
+  /* Stats */
+
+  .game-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .finish-button {
+    grid-column: 1 / -1;
+  }
+
+  /* Result */
+
+  .result-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .home-card {
+    padding: 30px 18px;
+  }
+
+  .wiki-game-logo img {
+    width: 145px;
+  }
+
+  .home-card h2 {
+    font-size: 18px;
+  }
+}
+/* =========================================
+   CHALLENGE SELECTION
+========================================= */
+
+.challenge-selection {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.challenge-selection h3 {
+  margin: 0 0 15px;
+
+  text-align: left;
+
+  color: #202122 !important;
+
+  font-size: 18px;
+}
+
+.challenge-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.challenge-option {
+  width: 100%;
+  height: auto;
+
+  min-height: 180px;
+
+  padding: 18px;
+
+  border: 2px solid #dddddd;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #202122 !important;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.challenge-option:hover {
+  border-color: #596f8f;
+
+  background: #f7f8fa;
+}
+
+.challenge-option.selected {
+  border-color: #596f8f;
+
+  background: #eef2f7;
+
+  box-shadow:
+    0 0 0 2px rgba(89, 111, 143, 0.15);
+}
+
+.challenge-icon {
+  font-size: 32px;
+
+  margin-bottom: 4px;
+}
+
+.challenge-number {
+  font-size: 10px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  color: #777777 !important;
+}
+
+.challenge-option strong {
+  font-size: 15px;
+
+  color: #202122 !important;
+
+  text-align: center;
+}
+
+.challenge-arrow {
+  font-size: 18px;
+
+  color: #596f8f !important;
+
+  margin: 2px 0;
+}
+
+/* Start button */
+
+.start-game-button {
+  width: 100%;
+
+  height: 62px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #596f8f;
+
+  color: #ffffff !important;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.start-game-button:hover:not(:disabled) {
+  background: #465a76;
+}
+
+.start-game-button:disabled {
+  background: #b8bec7;
+
+  color: #ffffff !important;
+
+  cursor: not-allowed;
+
+  opacity: 1;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-option {
+    min-height: 160px;
+  }
+
+}
+/* =====================================================
+   FIREBASE LIVE LEADERBOARD
+===================================================== */
+
+.live-player-count {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 12px 0;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: #f4f6f8;
+
+  color: #202122;
+}
+
+.live-player-count span {
+  font-size: 12px;
+}
+
+.live-player-count strong {
+  font-size: 16px;
+
+  color: #202122 !important;
+}
+
+.live-player-count small {
+  font-size: 11px;
+
+  color: #666666 !important;
+}
+
+.leader-player {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.leader-player strong {
+  color: #202122 !important;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.leader-player small {
+  color: #777777 !important;
+
+  font-size: 10px;
+
+  margin-top: 2px;
+}
+
+.leader-score {
+  color: #202122 !important;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+.your-leader-row {
+  border: 2px solid #596f8f !important;
+
+  background: #eef2f7 !important;
+}
+
+.leaderboard-loading {
+  text-align: center;
+
+  padding: 25px 10px;
+
+  color: #666666 !important;
+
+  font-size: 13px;
+}
+
+.leaderboard-dots {
+  text-align: center;
+
+  padding: 6px;
+
+  color: #777777 !important;
+
+  letter-spacing: 4px;
+}
+
+.your-position {
+  position: relative;
+}
+
+.your-position small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #596f8f !important;
+
+  font-weight: bold;
+}
+
+/* =====================================================
+   FINAL POSITION
+===================================================== */
+
+.final-position-box {
+  margin-top: 20px;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  background: #f4f6f8;
+
+  border: 2px solid #d8dce2;
+
+  text-align: center;
+}
+
+.final-position-box span {
+  display: block;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  color: #777777 !important;
+
+  margin-bottom: 6px;
+}
+
+.final-position-box strong {
+  display: block;
+
+  font-size: 36px;
+
+  color: #202122 !important;
+
+  line-height: 1.1;
+}
+
+.final-position-box p {
+  margin: 7px 0 0;
+
+  color: #596f8f !important;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+/* =====================================================
+   MOBILE LEADERBOARD
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .leader-player strong {
+    font-size: 12px;
+  }
+
+  .leader-score {
+    font-size: 10px;
+  }
+
+  .final-position-box strong {
+    font-size: 32px;
+  }
+
+}

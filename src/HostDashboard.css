@@ -1,0 +1,321 @@
+.host-page {
+  min-height: 100vh;
+  background: #f3eadc;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #202020;
+}
+
+.host-page h1,
+.host-page h2,
+.host-page h3,
+.host-page p,
+.host-page span,
+.host-page strong,
+.host-page small,
+.host-page th,
+.host-page td {
+  color: #202020;
+}
+
+.host-header {
+  max-width: 1500px;
+  margin: 0 auto 24px;
+  background: #ffffff;
+  border: 3px solid #202020;
+  border-radius: 18px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 6px 6px 0 #202020;
+  gap: 20px;
+}
+
+.host-logo img {
+  width: 190px;
+  max-width: 100%;
+  display: block;
+}
+
+.host-title {
+  text-align: right;
+}
+
+.host-title h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.host-title p {
+  margin: 5px 0 0;
+  font-weight: 600;
+  color: #555555;
+  opacity: 1;
+}
+
+.host-stats {
+  max-width: 1500px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.host-stat-card {
+  background: #ffffff;
+  border: 3px solid #202020;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 0 #202020;
+}
+
+.host-stat-card span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.host-stat-card strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.host-stat-card small {
+  display: block;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.host-table-card {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 3px solid #202020;
+  border-radius: 18px;
+  box-shadow: 6px 6px 0 #202020;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #202020;
+}
+
+.table-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.table-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555555;
+  opacity: 1;
+}
+
+.live-indicator {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.live-indicator span {
+  font-size: 18px;
+}
+
+.host-loading {
+  padding: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+th {
+  background: #f1e6d6;
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 900;
+  border-bottom: 2px solid #202020;
+  white-space: nowrap;
+}
+
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #d5d0c8;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #faf6ef;
+}
+
+.points {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  border: 2px solid #202020;
+}
+
+.status.completed {
+  background: #d9f3dc;
+}
+
+.status.playing {
+  background: #fff0b8;
+}
+
+.status.failed {
+  background: #ffd6d6;
+}
+
+@media (max-width: 800px) {
+
+  .host-page {
+    padding: 12px;
+  }
+
+  .host-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host-title {
+    text-align: center;
+  }
+
+  .host-title h1 {
+    font-size: 21px;
+  }
+
+  .host-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+/* =========================================
+   FINAL TOP 3 WINNERS
+========================================= */
+
+.winners-section {
+  max-width: 1500px;
+  margin: 30px auto 10px;
+  background: #ffffff;
+  border: 3px solid #202020;
+  border-radius: 18px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 0 #202020;
+}
+
+.winners-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.winners-title h2 {
+  margin: 0;
+  color: #202020;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.winners-title p {
+  margin: 6px 0 0;
+  color: #555555;
+  font-weight: 600;
+}
+
+.winners-podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+}
+
+.winner-card {
+  width: 250px;
+  min-height: 190px;
+  border: 3px solid #202020;
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 0 #202020;
+}
+
+.winner-card.first-place {
+  min-height: 230px;
+}
+
+.winner-medal {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.winner-place {
+  font-size: 13px;
+  font-weight: 900;
+  color: #555555;
+}
+
+.winner-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 21px;
+  color: #202020;
+  word-break: break-word;
+}
+
+.winner-points {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #202020;
+}
+
+@media (max-width: 800px) {
+
+  .winners-podium {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .winner-card,
+  .winner-card.first-place {
+    width: 100%;
+    max-width: 350px;
+    min-height: 180px;
+  }
+
+}
