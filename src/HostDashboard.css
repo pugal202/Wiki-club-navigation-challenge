@@ -30,6 +30,7 @@
   justify-content: space-between;
   box-shadow: 6px 6px 0 #202020;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .host-logo img {
@@ -70,6 +71,7 @@
   padding: 20px;
   text-align: center;
   box-shadow: 4px 4px 0 #202020;
+  box-sizing: border-box;
 }
 
 .host-stat-card span {
@@ -98,6 +100,7 @@
   border-radius: 18px;
   box-shadow: 6px 6px 0 #202020;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .table-header {
@@ -106,6 +109,8 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 3px solid #202020;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
 .table-header h2 {
@@ -124,6 +129,7 @@
 .live-indicator {
   font-weight: 900;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .live-indicator span {
@@ -139,6 +145,7 @@
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -195,30 +202,6 @@ tbody tr:hover {
   background: #ffd6d6;
 }
 
-@media (max-width: 800px) {
-
-  .host-page {
-    padding: 12px;
-  }
-
-  .host-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .host-title {
-    text-align: center;
-  }
-
-  .host-title h1 {
-    font-size: 21px;
-  }
-
-  .host-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
 /* =========================================
    FINAL TOP 3 WINNERS
 ========================================= */
@@ -304,18 +287,358 @@ tbody tr:hover {
   color: #202020;
 }
 
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .host-page {
+    padding: 18px;
+  }
+
+  .host-header {
+    padding: 18px;
+  }
+
+  .host-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .host-title h1 {
+    font-size: 25px;
+  }
+
+  .winner-card {
+    width: 220px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 800px) {
+
+  .host-page {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+
+  .host-header {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 12px;
+
+    border: 2px solid #202020;
+    border-radius: 14px;
+
+    box-shadow: 4px 4px 0 #202020;
+  }
+
+  .host-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .host-logo img {
+    width: 130px;
+    max-width: 70%;
+  }
+
+  .host-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .host-title h1 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .host-title p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* STATS */
+
+  .host-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin-bottom: 16px;
+  }
+
+  .host-stat-card {
+    padding: 14px 6px;
+
+    border: 2px solid #202020;
+    border-radius: 12px;
+
+    box-shadow: 3px 3px 0 #202020;
+  }
+
+  .host-stat-card span {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .host-stat-card strong {
+    font-size: 23px;
+  }
+
+  .host-stat-card small {
+    font-size: 10px;
+  }
+
+  /* PARTICIPANT TABLE */
+
+  .host-table-card {
+    width: 100%;
+
+    border: 2px solid #202020;
+    border-radius: 14px;
+
+    box-shadow: 4px 4px 0 #202020;
+  }
+
+  .table-header {
+    padding: 14px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    border-bottom: 2px solid #202020;
+  }
+
+  .table-header h2 {
+    font-size: 19px;
+  }
+
+  .table-header p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .live-indicator {
+    font-size: 12px;
+  }
+
+  .live-indicator span {
+    font-size: 15px;
+  }
+
+  /* TABLE CAN SCROLL INSIDE CARD */
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 850px;
+  }
+
+  th {
+    padding: 10px 8px;
+    font-size: 10px;
+  }
+
+  td {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+
+  .points {
+    font-size: 13px;
+  }
+
+  .status {
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+
+  /* =========================================
+     WINNERS
+  ========================================= */
+
+  .winners-section {
+    width: 100%;
+
+    margin: 20px auto 8px;
+
+    padding: 15px 10px;
+
+    border: 2px solid #202020;
+    border-radius: 14px;
+
+    box-shadow: 4px 4px 0 #202020;
+  }
+
+  .winners-title {
+    margin-bottom: 17px;
+  }
+
+  .winners-title h2 {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .winners-title p {
+    font-size: 11px;
+  }
 
   .winners-podium {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 14px;
   }
 
   .winner-card,
   .winner-card.first-place {
     width: 100%;
-    max-width: 350px;
-    min-height: 180px;
+    max-width: 320px;
+    min-height: 155px;
+
+    padding: 15px;
+
+    border: 2px solid #202020;
+    border-radius: 13px;
+
+    box-shadow: 3px 3px 0 #202020;
   }
 
+  .winner-medal {
+    font-size: 38px;
+    margin-bottom: 5px;
+  }
+
+  .winner-place {
+    font-size: 11px;
+  }
+
+  .winner-card strong {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+
+  .winner-points {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  /* HOST LOGIN */
+
+  .host-login-card {
+    width: calc(100% - 20px) !important;
+    margin: 35px auto !important;
+    padding: 22px !important;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+  .host-page {
+    padding: 8px;
+  }
+
+  .host-header {
+    padding: 13px 8px;
+  }
+
+  .host-logo img {
+    width: 110px;
+  }
+
+  .host-title h1 {
+    font-size: 18px;
+  }
+
+  .host-title p {
+    font-size: 11px;
+  }
+
+  .host-stats {
+    gap: 7px;
+  }
+
+  .host-stat-card {
+    padding: 11px 4px;
+  }
+
+  .host-stat-card span {
+    font-size: 19px;
+  }
+
+  .host-stat-card strong {
+    font-size: 20px;
+  }
+
+  .host-stat-card small {
+    font-size: 9px;
+  }
+
+  .table-header {
+    padding: 12px;
+  }
+
+  .table-header h2 {
+    font-size: 17px;
+  }
+
+  .winners-title h2 {
+    font-size: 19px;
+  }
+
+  .winner-card,
+  .winner-card.first-place {
+    max-width: 290px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+
+  .host-page {
+    padding: 6px;
+  }
+
+  .host-stats {
+    gap: 6px;
+  }
+
+  .host-stat-card strong {
+    font-size: 18px;
+  }
+
+  .host-stat-card small {
+    font-size: 8px;
+  }
+
+  .winner-card,
+  .winner-card.first-place {
+    max-width: 270px;
+  }
 }
